@@ -11,6 +11,39 @@
         ],
         "createdAt": "2026-11-03T17:53:39.018Z",
         "reason": "Brand guide MARCA-VERTIX-STUDIO.md section 9 mandates soft lime glow; inherited from user's base HTML"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-03T18:00:57.646Z",
+        "reason": "problem-note left accent comes from user's base HTML; user asked to evolve, not redesign"
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-03T18:00:57.682Z",
+        "reason": "Icon tiles from user's base HTML and brand guide (line icons in cards); user asked not to redesign"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "assets/css/site.css"
+        ],
+        "createdAt": "2026-11-03T18:00:57.718Z",
+        "reason": "problem-note left accent comes from user's base HTML; user asked to evolve, not redesign"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-11-03T18:00:57.742Z",
+        "reason": "Brand guide MARCA-VERTIX-STUDIO.md section 9 mandates Inter for body text"
       }
     ]
   }

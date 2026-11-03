@@ -13,7 +13,7 @@ Supuestos (no hubo preguntas, por instrucción del usuario):
 ## Proyectos (solo estos, nada inventado)
 | slug | Nombre | Categoría | URL |
 |---|---|---|---|
-| miaula | MiAula | Sistema | mi-aula-kappa.vercel.app |
+| miaula | MiAula | Sistema | mi-aula-neon.vercel.app |
 | fairmap | FairMap | Sistema | fairmap-kappa.vercel.app |
 | ecodataai | EcoDataAI | Sistema | — |
 | saldoclaro | SaldoClaro | Sistema (app Android) | — |

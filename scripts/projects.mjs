@@ -14,7 +14,7 @@ export const projects = [
   },
   {
     slug: "miaula", name: "MiAula", cat: "sistema", label: "Gestión para docentes",
-    url: "https://mi-aula-kappa.vercel.app/", live: true,
+    url: "https://mi-aula-neon.vercel.app/", live: true,
     stack: ["React", "TypeScript", "Supabase", "Tailwind"],
     tagline: "Asistencia, notas y comunicación con padres en un solo lugar. Funciona incluso sin internet.",
     problem: "Los docentes de primaria pierden horas pasando asistencia, notas y listas a mano. MiAula lo ordena todo y genera los reportes listos para presentar.",
