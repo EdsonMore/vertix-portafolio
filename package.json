@@ -1,0 +1,13 @@
+{
+  "name": "vertix-portafolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "capture": "node scripts/capture.mjs",
+    "dev": "npx --yes serve ."
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1"
+  }
+}

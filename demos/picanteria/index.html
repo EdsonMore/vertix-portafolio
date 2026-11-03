@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picantería El Buen Sabor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <img class="hero-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=70" alt="Platos de la picantería">
+    <div class="hero-text">
+      <h1>El Buen Sabor</h1>
+      <p>Picantería tradicional · Sabor de casa desde siempre</p>
+      <a href="#carta" class="btn btn-mostaza">Ver la carta</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="dia">
+      <div class="dia-head">
+        <h2>Plato del día</h2>
+        <label class="switch">
+          <input type="checkbox" id="toggleDia" checked>
+          <span class="slider"></span>
+          <span class="switch-label">Mostrar</span>
+        </label>
+      </div>
+      <p class="hint">Simulación: el dueño lo activa o desactiva desde su celular.</p>
+      <article class="dia-card" id="diaCard">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=70" alt="Plato del día">
+        <div>
+          <h3>Chupe de camarones</h3>
+          <p>Caldo cremoso con camarones de río, huevo, queso fresco y un toque de huacatay.</p>
+          <strong class="precio">S/ 32.00</strong>
+          <button class="btn btn-rojo" data-add-dia>+ Agregar al pedido</button>
+        </div>
+      </article>
+      <p class="dia-off" id="diaOff" hidden>Hoy no hay plato del día. ¡Vuelve mañana!</p>
+    </section>
+
+    <section id="carta" class="carta">
+      <h2>Nuestra carta</h2>
+      <div id="menu"></div>
+    </section>
+
+    <section class="resenas">
+      <h2>¿Te gustó?</h2>
+      <p>Tu opinión nos ayuda a crecer. ¡Gracias por visitarnos!</p>
+      <!-- Reemplaza el href con el enlace real de reseñas de Google Maps -->
+      <a class="btn btn-mostaza" href="#carta" title="En tu web irá el enlace real a tus reseñas de Google">⭐ Déjanos una reseña en Google</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Picantería El Buen Sabor · Arequipa, Perú (dirección ficticia)</p>
+  </footer>
+
+  <div class="pedido-bar" id="pedidoBar">
+    <div>
+      <span id="pedidoCount">0 platos</span>
+      <strong id="pedidoTotal">S/ 0.00</strong>
+    </div>
+    <button class="btn btn-wsp" id="btnPedir" disabled>Pedir por WhatsApp</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

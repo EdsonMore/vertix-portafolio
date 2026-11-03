@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Cut · Barbería</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <img class="hero-img" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=70" alt="Interior de la barbería">
+    <div class="hero-text">
+      <p class="tag">Barbería</p>
+      <h1>URBAN <span>CUT</span></h1>
+      <p>Cortes clásicos y modernos. Reserva tu turno en segundos.</p>
+      <a href="#reserva" class="btn btn-oro">Reservar turno</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="gente card">
+      <h2>¿Cuánta gente hay?</h2>
+      <div class="estado" id="estado">
+        <span class="dot"></span>
+        <strong id="estadoTxt">Poco</strong>
+      </div>
+      <p id="estadoDesc"></p>
+      <button class="btn btn-ghost" id="btnEstado">Cambiar estado (barbero)</button>
+      <p class="hint">Simulación: el barbero lo marca desde su celular.</p>
+    </section>
+
+    <section id="reserva" class="card">
+      <h2>Reserva tu turno</h2>
+      <form id="formReserva">
+        <label>Barbero
+          <select id="barbero" required>
+            <option value="">Elige tu barbero</option>
+            <option>Carlos "El Fade"</option>
+            <option>Diego Navaja</option>
+            <option>Martín Clipper</option>
+          </select>
+        </label>
+        <label>Fecha
+          <select id="fecha" required></select>
+        </label>
+        <label>Hora
+          <select id="hora" required></select>
+        </label>
+        <button class="btn btn-oro" type="submit">Ver resumen</button>
+      </form>
+
+      <div class="resumen" id="resumen" hidden>
+        <h3>Resumen de tu turno</h3>
+        <ul id="resumenLista"></ul>
+        <button class="btn btn-wsp" id="btnWsp">Confirmar por WhatsApp</button>
+      </div>
+    </section>
+
+    <section class="card fidelidad">
+      <h2>Tarjeta de fidelidad</h2>
+      <p>Cada 6 cortes, el siguiente es gratis.</p>
+      <div class="sellos" id="sellos"></div>
+      <p class="contador" id="contador"></p>
+      <div class="acciones">
+        <button class="btn btn-oro" id="btnSellar">Sellar corte</button>
+        <button class="btn btn-ghost" id="btnReset">Reiniciar</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Nuestros cortes</h2>
+      <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=70" alt="Corte 1" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=70" alt="Corte 2" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=70" alt="Corte 3" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=70" alt="Corte 4" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=70" alt="Corte 5" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=600&q=70" alt="Corte 6" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Urban Cut · Lun a Sáb 10:00 – 20:00 · Dirección ficticia</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+:root {
+  --negro: #111111;
+  --panel: #1c1c1c;
+  --oro: #D4AF37;
+  --gris: #d6d6d6;
+  --gris-osc: #8a8a8a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--negro);
+  color: var(--gris);
+  line-height: 1.5;
+}
+
+img { display: block; max-width: 100%; }
+h2 { color: var(--oro); font-size: 1.5rem; margin-bottom: 1rem; letter-spacing: .03em; }
+h3 { color: #fff; margin-bottom: .5rem; }
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 6px;
+  padding: .8rem 1.3rem;
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: .9rem;
+}
+.btn-oro { background: var(--oro); color: var(--negro); }
+.btn-ghost { background: transparent; color: var(--oro); border: 1px solid var(--oro); }
+.btn-wsp { background: #25D366; color: #fff; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* Hero */
+.hero { position: relative; min-height: 70vh; display: flex; align-items: flex-end; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(.6); }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(17,17,17,.3), var(--negro)); }
+.hero-text { position: relative; z-index: 1; padding: 1.5rem; }
+.tag { color: var(--oro); text-transform: uppercase; letter-spacing: .3em; font-size: .8rem; }
+.hero h1 { color: #fff; font-size: 3rem; letter-spacing: .08em; }
+.hero h1 span { color: var(--oro); }
+.hero-text p:not(.tag) { margin: .25rem 0 1.25rem; }
+
+main { padding: 1.5rem 1rem; max-width: 1100px; margin: 0 auto; display: grid; gap: 2rem; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid #2c2c2c;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.hint { font-size: .8rem; color: var(--gris-osc); margin-top: .5rem; }
+
+/* Estado de gente */
+.estado { display: flex; align-items: center; gap: .75rem; font-size: 1.6rem; margin-bottom: .25rem; }
+.dot { width: 18px; height: 18px; border-radius: 50%; background: var(--c, #2ecc71); box-shadow: 0 0 12px var(--c, #2ecc71); }
+.estado strong { color: var(--c, #2ecc71); }
+.gente p { margin-bottom: 1rem; }
+.gente .hint { margin-top: .5rem; margin-bottom: 0; }
+
+/* Formulario */
+form { display: grid; gap: 1rem; }
+label { display: grid; gap: .35rem; font-size: .9rem; color: var(--gris-osc); }
+select {
+  font: inherit;
+  padding: .75rem;
+  background: var(--negro);
+  color: var(--gris);
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+select:focus { outline: 2px solid var(--oro); }
+
+.resumen { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px dashed var(--oro); }
+.resumen ul { list-style: none; margin-bottom: 1rem; display: grid; gap: .3rem; }
+.resumen li strong { color: var(--oro); }
+
+/* Fidelidad */
+.sellos { display: grid; grid-template-columns: repeat(6, 1fr); gap: .5rem; margin: 1rem 0; }
+.sello {
+  aspect-ratio: 1;
+  border: 2px dashed var(--gris-osc);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  color: var(--gris-osc);
+}
+.sello.on { border: 2px solid var(--oro); background: var(--oro); color: var(--negro); }
+.contador { font-size: 1.1rem; margin-bottom: 1rem; }
+.contador.gratis { color: var(--oro); font-size: 1.6rem; font-weight: bold; }
+.acciones { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+/* Galería */
+.galeria { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+.galeria img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; filter: grayscale(.3); transition: filter .2s; }
+.galeria img:hover { filter: none; }
+
+footer { text-align: center; padding: 2rem 1rem; font-size: .85rem; color: var(--gris-osc); }
+
+@media (min-width: 768px) {
+  .hero h1 { font-size: 5rem; }
+  .hero-text { padding: 3rem; }
+  main { grid-template-columns: 1fr 1fr; }
+  main > section:last-child, #reserva { grid-column: 1 / -1; }
+  #reserva { order: 1; }
+  main > section:last-child { order: 2; }
+  form { grid-template-columns: repeat(3, 1fr) auto; align-items: end; }
+  .galeria { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+}
